@@ -5,37 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-
     <TextView
-        android:id="@+id/event_type"
+        android:id="@+id/event"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="48dp"
-        android:layout_marginRight="12dp"
-        android:textSize="14sp"
-        android:gravity="center_vertical|start"
-        android:textStyle="bold"
-        />
-    <TextView
-        android:id="@+id/event_airport"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="48dp"
-        android:layout_marginRight="12dp"
-        android:textSize="14sp"
-        android:gravity="center_vertical|start"
-        android:textStyle="bold"
-        />
-    <TextView
-        android:id="@+id/event_timestamp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="48dp"
-        android:layout_marginRight="12dp"
+        android:layout_marginLeft="24dp"
         android:textSize="14sp"
         android:gravity="center_vertical|start"
         android:textStyle="bold"
