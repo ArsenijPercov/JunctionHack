@@ -1,5 +1,6 @@
 package com.example.junctionhack;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,6 +55,7 @@ public class Baggage {
         }
 
     }
+
     /*
     If everything is set to 0: N	Normal	Standard luggage
     A	Animal	Live animal, requires heated cargo
@@ -63,6 +65,7 @@ public class Baggage {
     T	Toxic chemicals	Larger amount of possibly hazardous chemicals
     W	Weapons or ammunition	Weapons or hunting gear, e.g. ammunition
  */
+
     //public Str
     public void addEvent(Events e){
         listEvents.add(e);
@@ -71,6 +74,7 @@ public class Baggage {
 
         return baggageId;
     }
+
     public String getCustomerId(){
         return customerId;
     }
