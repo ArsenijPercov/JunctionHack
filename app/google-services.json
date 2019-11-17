@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "707546648520",
+    "firebase_url": "https://trackluggage-742dd.firebaseio.com",
+    "project_id": "trackluggage-742dd",
+    "storage_bucket": "trackluggage-742dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:707546648520:android:26315aa6845e99089b7afd",
+        "android_client_info": {
+          "package_name": "com.example.junctionhack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "707546648520-nshulp936j5b8a6dltsb4qb0gvko0kg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOEvCI6A-7z8_WIuVMxtIp3V_BLqDWzfM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "707546648520-nshulp936j5b8a6dltsb4qb0gvko0kg7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

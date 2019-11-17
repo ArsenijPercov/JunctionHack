@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <EditText
+        android:id="@+id/put_airport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Airport"/>
+    <EditText
+        android:id="@+id/put_timestamp"
+        android:layout_width="match_parent"
+        android:hint="Timestamp"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/put_event_id"
+        android:hint="EventId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/put_baggage_id"
+        android:hint="BaggageId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/put_type"
+        android:hint="Type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/test"
+        android:text="TEST"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
