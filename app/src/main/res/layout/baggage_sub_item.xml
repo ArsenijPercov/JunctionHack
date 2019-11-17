@@ -5,18 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/event"
-        app:fontFamily="@font/roboto"
-        style="@style/roboto_mono_light"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="24dp"
-        android:textSize="14sp"
-        android:gravity="center_vertical|start"
-        android:textStyle="bold"
-        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/event"
+            app:fontFamily="@font/roboto"
+            style="@style/roboto_mono_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24dp"
+            android:textSize="12sp"
+            android:gravity="center_vertical|start"
+            android:textStyle="bold" />
+    </ScrollView>
+
+
 
 </LinearLayout>
 

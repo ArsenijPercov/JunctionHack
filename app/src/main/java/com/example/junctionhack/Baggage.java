@@ -1,6 +1,8 @@
 package com.example.junctionhack;
 
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +12,7 @@ public class Baggage {
     private String customerId; // Baggage owners ID
     private boolean rushbag; // Baggage needs to hurry to a connecting flight
     private float weight;
+    private String name;
 
     private boolean A;
     private boolean L;
@@ -18,12 +21,13 @@ public class Baggage {
     private boolean T;
     private boolean W;
 
-    List<Events> listEvents = new ArrayList<Events>();
-    Baggage(String baggageIdnew, String customerIdnew, boolean rushbagnew, float weightnew, String special, List<Events> listEventsNew){
+    ArrayList<Events> listEvents = new ArrayList<Events>();
+    Baggage(String baggageIdnew, String customerIdnew, boolean rushbagnew, float weightnew, String special, ArrayList<Events> listEventsNew){
         baggageId = baggageIdnew;
         customerId = customerIdnew;
         rushbag = rushbagnew;
         weight = weightnew;
+        //name = "DEFAULT";
         listEvents = listEventsNew;
         for (int i = 0; i<special.length();i++){
             switch (special.charAt(i)){
@@ -67,6 +71,15 @@ public class Baggage {
  */
 
     //public Str
+    public void setName(String newName){
+        Log.d("SANSA", newName);
+        name = newName;
+        Log.d("SANSA2", name);
+    }
+
+    public String getName(){
+        return name;
+    }
     public void addEvent(Events e){
         listEvents.add(e);
     }
@@ -74,7 +87,10 @@ public class Baggage {
 
         return baggageId;
     }
+    public ArrayList<Events> getListEvents(){
 
+        return listEvents;
+    }
     public String getCustomerId(){
         return customerId;
     }
