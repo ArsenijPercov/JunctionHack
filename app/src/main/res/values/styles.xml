@@ -1,7 +1,6 @@
 <resources>
 
     <!-- Base application theme. -->
-    id
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -10,8 +9,10 @@
     </style>
     <style name="roboto_mono_light">roboto
         <item name="android:fontFamily">@font/roboto_mono_light</item>
+        <item name="android:textStyle">italic</item>
     </style>
     <style name="roboto_mono_bold">roboto
         <item name="android:fontFamily">@font/roboto_mono_light</item>
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>

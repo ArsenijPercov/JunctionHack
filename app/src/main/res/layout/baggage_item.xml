@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:gravity="center_vertical|start"
-        android:textSize="25sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:fontFamily="@font/roboto_mono_bold" />
     <ImageView
@@ -25,5 +25,12 @@
         android:layout_centerVertical="true"
         android:layout_marginRight="22dp"
         android:src="@drawable/ic_remove_black_24dp" />
+    <ImageView
+        android:id="@+id/luggage_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/remove_baggage"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"/>
 
 </RelativeLayout>

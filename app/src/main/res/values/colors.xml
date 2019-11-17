@@ -2,7 +2,10 @@
 <resources>
     <color name="colorPrimary">#770578</color>#F38100
     <color name="colorPrimaryDark">#DB682E</color>
-    <color name="colorSecondary">#B200B7</color>
-    <color name="colorSecondaryDark">#770578</color>
+    <color name="colorSecondary">#F38100</color>
     <color name="colorAccent">#F38100</color>
+    <color name="missing_color">#FF504C</color>
+    <color name="claimed_color">#53C276</color>
+    <color name="generic_color">#8C7D7A</color>
+
 </resources>

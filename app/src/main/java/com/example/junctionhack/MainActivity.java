@@ -12,6 +12,7 @@ import android.graphics.ColorFilter;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,13 +32,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         expandingList = (ExpandingList) findViewById(R.id.baggage_list);
-        addBaggage("My baggage",  android.R.color.holo_green_light, R.mipmap.baggage_icon_foreground);
-        addBaggage("My sons baggage", android.R.color.holo_blue_dark, R.mipmap.baggage_icon_foreground);
+        addBaggage("My baggage",  R.color.claimed_color, R.mipmap.baggage_icon_foreground);
+        addBaggage("My sons baggage", R.color.missing_color, R.mipmap.baggage_icon_foreground);
         addEvent("My sons baggage", "MISSING\nBER\n01521899\n\n");
 
     }
     protected void addBaggage(String title, int colorRes, int iconRes) {
         final ExpandingItem baggage = (ExpandingItem) expandingList.createNewItem(R.layout.expanding_layout);
+        ImageView img = (ImageView) baggage.findViewById(R.id.luggage_info);
         if(baggage != null) {
             baggage.createSubItems(1);
             baggage.setIndicatorColorRes(colorRes);
