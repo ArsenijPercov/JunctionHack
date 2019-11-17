@@ -1,5 +1,6 @@
 package com.example.junctionhack;
 
+
 public class Events {
     private String eventId; // Baggage events ID
     private String baggageId;
@@ -14,13 +15,39 @@ public class Events {
     private boolean MISSING;
 
 
-    public String getEventId(){
-        return eventId;
-    }
+    Events(String baggageIdNew, String eventIdNew, String airportNew, String timestampNew, String type){
+        baggageId = baggageIdNew;
+        eventId = eventIdNew;
+        airport = airportNew;
+        timestamp = timestampNew;
+        //baggageId = baggageNew;
+        switch (type){
+           case "CHECKED_IN":
+                CHECKED_IN= true;
+                break;
+           case "LOADED":
+                LOADED = true;
+                break;
+           case "UNLOADED":
+               UNLOADED = true;
+                break;
+           case "DAMAGED":
+                DAMAGED = true;
+                break;
+           case "CLAIMED":
+                CLAIMED = true;
+                break;
+           case "MISSING":
+               MISSING= true;
+               break;
+           default:
+               break;
+            }
+        }
 
-    public String getBaggageId(){
-        return baggageId;
-    }
+    public String getEventId() {return eventId;}
+
+    public String getBaggageId() { return baggageId;}
 
     public String getAirport(){
         return airport;

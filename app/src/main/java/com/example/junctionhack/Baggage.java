@@ -1,5 +1,9 @@
 package com.example.junctionhack;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Baggage {
 
     private String baggageId;
@@ -14,6 +18,44 @@ public class Baggage {
     private boolean T;
     private boolean W;
 
+    List<Events> listEvents = new ArrayList<Events>();
+    Baggage(String baggageIdnew, String customerIdnew, boolean rushbagnew, float weightnew, String special, List<Events> listEventsNew){
+        baggageId = baggageIdnew;
+        customerId = customerIdnew;
+        rushbag = rushbagnew;
+        weight = weightnew;
+        listEvents = listEventsNew;
+        for (int i = 0; i<special.length();i++){
+            switch (special.charAt(i)){
+                case 'A':
+                    A = true;
+                    break;
+                case 'L':
+                    L = true;
+                    break;
+                case 'H':
+                    H = true;
+                    break;
+                case 'C':
+                    C = true;
+                    break;
+                case 'T' :
+                    T = true;
+                    break;
+                case 'W':
+                    W = true;
+                    break;
+                case 'N':
+                    A= L = H = C = T = W = false;
+                    break;
+                default:
+                    break;
+
+            }
+        }
+
+    }
+
     /*
     If everything is set to 0: N	Normal	Standard luggage
     A	Animal	Live animal, requires heated cargo
@@ -24,7 +66,12 @@ public class Baggage {
     W	Weapons or ammunition	Weapons or hunting gear, e.g. ammunition
  */
 
+    //public Str
+    public void addEvent(Events e){
+        listEvents.add(e);
+    }
     public String getBaggageId(){
+
         return baggageId;
     }
 
