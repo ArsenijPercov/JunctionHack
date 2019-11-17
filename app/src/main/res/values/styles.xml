@@ -1,11 +1,17 @@
 <resources>
 
     <!-- Base application theme. -->
+    id
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="roboto_mono_light">roboto
+        <item name="android:fontFamily">@font/roboto_mono_light</item>
+    </style>
+    <style name="roboto_mono_bold">roboto
+        <item name="android:fontFamily">@font/roboto_mono_light</item>
+    </style>
 </resources>

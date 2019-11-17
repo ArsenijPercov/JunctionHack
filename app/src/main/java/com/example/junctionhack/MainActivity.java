@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.TextViewCompat;
 
 import android.content.DialogInterface;
 import android.graphics.Canvas;
@@ -30,23 +31,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         expandingList = (ExpandingList) findViewById(R.id.baggage_list);
-        addBaggage("My baggage", "FIRST EVENT", android.R.color.holo_green_light, R.mipmap.baggage_icon_foreground);
-        addBaggage("My sons baggage","SECOND EVENT", android.R.color.holo_blue_dark, R.mipmap.baggage_icon_foreground);
+        addBaggage("My baggage",  android.R.color.holo_green_light, R.mipmap.baggage_icon_foreground);
+        addBaggage("My sons baggage", android.R.color.holo_blue_dark, R.mipmap.baggage_icon_foreground);
         addEvent("My sons baggage", "MISSING\nBER\n01521899\n\n");
 
     }
-    protected void addBaggage(String title, String event, int colorRes, int iconRes) {
+    protected void addBaggage(String title, int colorRes, int iconRes) {
         final ExpandingItem baggage = (ExpandingItem) expandingList.createNewItem(R.layout.expanding_layout);
         if(baggage != null) {
-
-            baggage.createSubItem();
-            TextView textView = baggage.findViewById(R.id.event);
-            textView.setText(event);
+            baggage.createSubItems(1);
             baggage.setIndicatorColorRes(colorRes);
             baggage.setIndicatorIconRes(iconRes);
             TextView txt;
             txt = (TextView) baggage.findViewById(R.id.baggage_name);
             txt.setText(title);
+            TextViewCompat.setTextAppearance(txt, R.style.roboto_mono_bold);
             baggage.findViewById(R.id.remove_baggage).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -87,47 +86,9 @@ public class MainActivity extends AppCompatActivity {
 
             oldString.append(event);
             textView.setText(oldString.toString());
+            TextViewCompat.setTextAppearance(textView, R.style.roboto_mono_light);
         } catch(NullPointerException e) {
             e.printStackTrace();
         }
-
-        /*StringBuilder oldString = new StringBuilder();
-
-
-        TextView view = (TextView) baggage.getSubItemView(0);
-        oldString.append(view.getText().toString());
-        expandingList.removeItem(baggage);
-
-        StringBuilder newString = new StringBuilder();
-        newString.append(oldString.toString());
-
-        final ExpandingItem baggage = (ExpandingItem) expandingList.createNewItem(R.layout.expanding_layout);
-        if(baggage != null) {
-            baggage.setIndicatorColorRes(colorRes);
-            baggage.setIndicatorIconRes(iconRes);
-            TextView txt;
-            txt = (TextView) baggage.findViewById(R.id.baggage_name);
-            txt.setText(title);
-
-
-
-
-        baggage.createSubItem();
-        baggage.createSubItem();
-
-        View vieww = baggage.getSubItemView(0);
-        TextView txxt = (TextView) vieww.findViewById(R.id.event);
-        txxt.setText(oldString.toString());
-
-        int idx = baggage.getSubItemsCount()-1;
-        View view = baggage.getSubItemView(idx);
-        StringBuilder result = new StringBuilder();
-        for(String s : event) {
-            result.append(s + "\n");
-        }
-        result.append("\n");
-        TextView text = (TextView) view.findViewById(R.id.event);
-        text.setText(result.toString());
-        */
     }
  }
