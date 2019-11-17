@@ -1,11 +1,13 @@
 package com.example.junctionhack;
 
+import java.util.List;
+
 public class Events {
     private String eventId; // Baggage events ID
-    private String baggageId;
+    //private String baggageId = "";
     private String airport; // Airport of the event, three-letter IATA code
     private String timestamp;
-
+    private String baggageId;
     private boolean CHECKED_IN;
     private boolean LOADED;
     private boolean UNLOADED;
@@ -13,15 +15,41 @@ public class Events {
     private boolean CLAIMED;
     private boolean MISSING;
 
+    Events(String baggageIdNew, String eventIdNew, String airportNew, String timestampNew, String type){
+        baggageId = baggageIdNew;
+        eventId = eventIdNew;
+        airport = airportNew;
+        timestamp = timestampNew;
+        //baggageId = baggageNew;
+        switch (type){
+           case "CHECKED_IN":
+                CHECKED_IN= true;
+                break;
+           case "LOADED":
+                LOADED = true;
+                break;
+           case "UNLOADED":
+               UNLOADED = true;
+                break;
+           case "DAMAGED":
+                DAMAGED = true;
+                break;
+           case "CLAIMED":
+                CLAIMED = true;
+                break;
+           case "MISSING":
+               MISSING= true;
+               break;
+           default:
+               break;
+            }
+        }
 
     public String getEventId(){
         return eventId;
     }
 
-    public String getBaggageId(){
-        return baggageId;
-    }
-
+    public String getBaggageId() { return baggageId;}
     public String getAirport(){
         return airport;
     }
